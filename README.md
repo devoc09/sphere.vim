@@ -3,7 +3,6 @@
 </div>
 
 Vim color scheme inspired by "A shooting star that appeared..."
-hoge
 
 ## Screenshot
 <div align="center">
@@ -31,6 +30,21 @@ colorscheme sphere
 
 Inside `init.lua`
 ```lua
+vim.cmd('colorscheme sphere')
+```
+
+### Transparent Background
+To enable transparent background, set `g:transparent_background` to `1` before setting the colorscheme:
+
+Inside `init.vim`
+```vim
+let g:transparent_background = 1
+colorscheme sphere
+```
+
+Inside `init.lua`
+```lua
+vim.g.transparent_background = 1
 vim.cmd('colorscheme sphere')
 ```
 
