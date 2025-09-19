@@ -14,6 +14,11 @@ if exists('syntax_on')
 endif
 let g:colors_name = 'sphere'
 
+" Configuration options
+if !exists('g:transparent_background')
+  let g:transparent_background = 0
+endif
+
 if has('termguicolors') && &termguicolors
   let g:terminal_ansi_colors = ['#1d1c1e', '#ff7074', '#498791', '#ff9548', '#75ace9', '#827ff5', '#6887ad', '#fefefe', '#4e4e4e', '#fe95a0', '#244c51', '#ffb74d', '#b8e7e1', '#a6ace9', '#344359', '#ccb08f']
   " Nvim uses g:terminal_color_{0-15} instead
@@ -37,7 +42,18 @@ if has('termguicolors') && &termguicolors
   hi! link markdownCode Comment
   hi! link markdownCodeBlock markdownCode
   hi! link markdownCodeDelimiter markdownCode
-  hi Normal guifg=#fefefe guibg=#1d1c1e gui=NONE cterm=NONE
+
+  " Apply colors based on transparent background setting
+  if g:transparent_background
+    hi Normal guifg=#fefefe guibg=NONE gui=NONE cterm=NONE
+    hi CursorLine guifg=NONE guibg=NONE gui=NONE cterm=NONE
+    hi CursorColumn guifg=NONE guibg=NONE gui=NONE cterm=NONE
+  else
+    hi Normal guifg=#fefefe guibg=#1d1c1e gui=NONE cterm=NONE
+    hi CursorLine guifg=NONE guibg=#2F2D30 gui=NONE cterm=NONE
+    hi CursorColumn guifg=NONE guibg=#3a392f gui=NONE cterm=NONE
+  endif
+
   hi StatusLine guifg=#fefefe guibg=#4e4e4e gui=NONE cterm=NONE
   hi StatusLineNC guifg=#1d1c1e guibg=#74705d gui=NONE cterm=NONE
   hi VertSplit guifg=#74705d guibg=#74705d gui=NONE cterm=NONE
@@ -84,8 +100,6 @@ if has('termguicolors') && &termguicolors
   hi debugBreakpoint guifg=#1d1c1e guibg=#fe95a0 gui=NONE cterm=NONE
   hi Cursor guifg=#000000 guibg=#dadada gui=NONE cterm=NONE
   hi lCursor guifg=#1d1c1e guibg=#418c72 gui=NONE cterm=NONE
-  hi CursorLine guifg=NONE guibg=#2F2D30 gui=NONE cterm=NONE
-  hi CursorColumn guifg=NONE guibg=#3a392f gui=NONE cterm=NONE
   hi Folded guifg=#ccb08f guibg=#5c4f40 gui=NONE cterm=NONE
   hi ColorColumn guifg=NONE guibg=#736350 gui=NONE cterm=NONE
   hi SpellBad guifg=NONE guibg=NONE guisp=#d75f5f gui=undercurl ctermfg=NONE ctermbg=NONE cterm=underline

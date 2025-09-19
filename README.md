@@ -33,6 +33,21 @@ Inside `init.lua`
 vim.cmd('colorscheme sphere')
 ```
 
+### Transparent Background
+To enable transparent background, set `g:transparent_background` to `1` before setting the colorscheme:
+
+Inside `init.vim`
+```vim
+let g:transparent_background = 1
+colorscheme sphere
+```
+
+Inside `init.lua`
+```lua
+vim.g.transparent_background = 1
+vim.cmd('colorscheme sphere')
+```
+
 <!-- If you using [`lualine`](https://github.com/nvim-lualine/lualine.nvim), you can alse enable the provided theme -->
 <!-- ```lua -->
 <!-- require('lualine').setup { -->
