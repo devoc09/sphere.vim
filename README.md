@@ -3,6 +3,7 @@
 </div>
 
 Vim color scheme inspired by "A shooting star that appeared..."
+hoge
 
 ## Screenshot
 <div align="center">
