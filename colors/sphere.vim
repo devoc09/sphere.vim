@@ -73,15 +73,15 @@ if has('termguicolors') && &termguicolors
   hi FoldColumn guifg=#4e4e4e guibg=NONE gui=NONE cterm=NONE
   hi Visual guifg=#6887ad guibg=#1d1c1e gui=reverse cterm=reverse
   hi VisualNOS guifg=#1d1c1e guibg=#344359 gui=NONE cterm=NONE
-  hi Pmenu guifg=NONE guibg=#736350 gui=NONE cterm=NONE
+  hi Pmenu guifg=NONE guibg=#1d1c1e gui=NONE cterm=NONE
   hi PmenuThumb guifg=NONE guibg=#74705d gui=NONE cterm=NONE
   hi PmenuSbar guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
   hi PmenuSel guifg=NONE guibg=#4e4e4e gui=NONE cterm=NONE
-  hi PmenuKind guifg=#344359 guibg=#736350 gui=NONE cterm=NONE
+  hi PmenuKind guifg=#344359 guibg=#1d1c1e gui=NONE cterm=NONE
   hi PmenuKindSel guifg=#344359 guibg=#4e4e4e gui=NONE cterm=NONE
-  hi PmenuExtra guifg=#ccb08f guibg=#736350 gui=NONE cterm=NONE
+  hi PmenuExtra guifg=#ccb08f guibg=#1d1c1e gui=NONE cterm=NONE
   hi PmenuExtraSel guifg=#ccb08f guibg=#4e4e4e gui=NONE cterm=NONE
-  hi PmenuMatch guifg=#ff9548 guibg=#736350 gui=NONE cterm=NONE
+  hi PmenuMatch guifg=#ff9548 guibg=#1d1c1e gui=NONE cterm=NONE
   hi PmenuMatchSel guifg=#ff9548 guibg=#4e4e4e gui=NONE cterm=NONE
   hi SignColumn guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
   hi Error guifg=#ff7074 guibg=#000000 gui=reverse cterm=reverse
@@ -141,7 +141,7 @@ if has('termguicolors') && &termguicolors
   if has('nvim-0.10')
     " Neovim's Floating Window
     hi! link NormalFloat Normal
-    hi FloatBorder guifg=#75ace9
+    hi FloatBorder guifg=#ff9548
 
     " Treesitter highlight
     hi @variable guifg=#fefefe
