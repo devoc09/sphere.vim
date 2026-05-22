@@ -151,6 +151,9 @@ if has('termguicolors') && &termguicolors
     hi @field guifg=#827ff5
     hi @property guifg=#827ff5
     hi! link @method Function
+
+  " HCL/Terraform: distinguish attribute names from strings
+  hi! link hclAttributeName Function
   endif
 
 " if not supported TrueColor & supported xterm-256color
